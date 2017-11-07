@@ -15,8 +15,7 @@ end
 
 get "/named-cat" do
   p params
-  @name = params[:name].capitalize
-  @age = params[:age]
+  @name = params[:name]
   erb(:index)
 end
 
