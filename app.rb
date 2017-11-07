@@ -13,12 +13,16 @@ get "/random-cat" do
   erb(:index)
 end
 
-get "/named-cat" do
+post "/named-cat" do
   p params
   @name = params[:name]
   erb(:index)
 end
 
-get "/:name" do |name|
-  "Allan loves #{name}"
+get "/form" do
+  erb(:form)
 end
+# 
+# get "/:name" do |name|
+#   "Allan loves #{name}"
+# end
