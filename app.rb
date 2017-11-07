@@ -8,8 +8,15 @@ get "/secret" do
   "secret message"
 end
 
-get "/cat" do
-  @array = ["Amigo", "Oscar", "Viking"].sample
+get "/random-cat" do
+  @name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
+end
+
+get "/named-cat" do
+  p params
+  @name = params[:name].capitalize
+  @age = params[:age]
   erb(:index)
 end
 
